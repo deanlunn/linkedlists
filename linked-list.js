@@ -18,20 +18,6 @@ class LinkedList {
     for (let val of vals) this.push(val);
   }
 
-  /** _get(idx): retrieve node at idx. */
-
-  _get(idx) {
-    let cur = this.head;
-    let count = 0;
-
-    while (cur !== null && count != idx) {
-      count += 1;
-      cur = cur.next;
-    }
-
-    return cur;
-  }
-
   /** push(val): add new value to end of list. */
 
   push(val) {
@@ -154,6 +140,8 @@ class LinkedList {
     this.length -= 1;
     return val;
   }
+
+  /** average(): return an average of all values in the list */
 
   average() {
     if (this.length === 0) return 0;
